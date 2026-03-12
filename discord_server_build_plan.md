@@ -1,91 +1,65 @@
 # ⚔️ Apptivators Academy: Discord Server Build Plan
 
-## 🎯 Onboarding: ⚔️call-to-arms⚔️
-**Channel ID**: 1481056554282254431
+## 🎯 Onboarding Carousel (7 Steps with Emoji Navigation)
 
-Welcome to the front lines of creation. This community exists for one reason: to fuel our passions and build a safer, better tomorrow through the power of code. Whether you are a "Noob" or a "God," your contribution is the engine of our collective growth.
+### Step 1: Welcome
+- Introduction to the community
+- "One App At A Time. Build it. Share it. Protect it."
 
-**Requirement:** Choose your purpose for joining the Server and give yourself a Skill Level Rating (1-5). Everyone has a place.
+### Step 2: Skill Level Selection
+- 1️⃣ The Noob (Lvl 0-1): Learning fundamentals
+- 2️⃣ The Beginner (Lvl 2): Building small apps
+- 3️⃣ The Intermediate (Lvl 3-7): Feature development
+- 4️⃣ The Expert (Lvl 8-12): Architectural solutions
+- 5️⃣ The God (Lvl 13+): Industry standards
 
-### Skill Levels:
-1. **The Noob** (Lvl 0-1): Struggles with basic syntax and logic. Relies on tutorials/AI.
-   - Focus: Learning fundamentals (variables, loops) and setting up dev environments.
-2. **The Beginner** (Lvl 2): Can build small, functional apps. Knows core language and basic Git.
-   - Focus: Writing workable code and learning to debug independently.
-3. **The Intermediate** (Lvl 3-7): The "workhorse" building defined features with minimal supervision.
-   - Focus: Code quality, performance optimization, and CI/CD pipelines.
-4. **The Expert** (Lvl 8-12): Solves complex architectural problems and mentors others.
-   - Focus: System reliability, cross-functional leadership, and setting engineering standards.
-5. **The "God"** (Lvl 13+): Impacts the entire industry.
-   - Focus: Innovation, visionary leadership, and long-term technical evolution.
+### Step 3: Language Interests
+- 1️⃣ Python 2️⃣ Java/JS 3️⃣ Web Dev 4️⃣ AI/ML 5️⃣ Cybersecurity
 
-### 🛡️ The Guard: Safety & Moderation
-- **Level 2+**: Active mentors - answer questions, guide struggles
-- **Level 4-5 (Community Leaders)**: Identify malware, debug critical errors
-- **Level 6+**: Help guide the next stars to success
-- **Golden Rule**: Treat all ban flags as false positives first
+### Step 4: The Guard - Safety Standards
+- Level 2+: Active mentors
+- Level 4-5: Community Leaders
+- Golden Rule: Treat ban flags as False Positives
 
-### 💡 The Forge: Learning & Growth
-- Contribute everywhere - fill channels with knowledge
-- Value is knowledge - share sites, docs, repos
-- Master Archive - add everything to Community GitHub
-- **GitHub**: https://github.com/whagan1310-droid/Apptivators-Academy
+### Step 5: The Forge - Learning & Growth
+- Contribute everywhere
+- Value is knowledge
+- Master Archive: GitHub
 
-### ⚠️ The Protocol: Public vs Private
-- **Public Channels**: Educational content, references, links - world is watching!
-- **Private Channels (Review Chamber)**: Code reviews, sensitive scripts
-- **The Blackout Rule**: Destroy all code before leaving private channels
+### Step 6: Server Rules (Full Details)
+**1. Open Source & Code Sharing**
+- All code freely shared
+- Private channels for proprietary work
 
-### 🤖 The Synthetic Edge
-Technical bots learn from us. Help refine them daily.
+**2. Malicious Content & Security**
+- Zero tolerance for malware
+- Strike system
 
----
+**3. Fair Review & Ban Appeals**
+- 1 chance to explain
+- 3+ mods required for bans
+- Case records kept
 
-## 📜 Server Rules & Development Guidelines
+**4. Community Conduct**
+- Zero harassment
+- No personal attacks
+- Keep it simple
 
-### 1. Open Source & Code Sharing Policy
-- **Freely Shared Code**: All code in public channels is freely shared for learning
-- **Private Collaboration**: Use Private Channels for proprietary work
-- **Documentation Requirements**: Provide code snippet, repo link, or source
-- **Third-Party Compliance**: Follow GitHub ToS, etc.
+### Step 7: Public vs Private Protocol
+- Public: Educational content
+- Private: Code reviews
+- Blackout Rule: Destroy code before leaving
 
-### 2. Malicious Content & Security
-- **Zero Tolerance**: Malware = immediate removal
-- **Strike System**: Formal strikes for violations
-- **Immediate Review**: Status "Under Review" until human check
-
-### 3. Fair Review & Ban Appeals
-- **Right to Explain**: 1 chance to explain
-- **Agreement**: 3+ mods required for bans
-- **Case Records**: Unique Ban File Number
-- **Full Disclosure**: Email case file to banned members
-- **Data Destruction**: Code from banned members destroyed
-
-### 4. Community Conduct
-- **Zero Harassment**: No bullying, hate speech
-- **No Personal Attacks**: Keep worldviews to yourself
-- **Truthfulness**: No fake news or misinformation
-- **The Coding Creed**: Keep it simple. One app at a time.
-
-### 5. Implementation Tips
-- **Pinned Messages**: Pin rules at top
-- **Strike Recording**: Use `!strike @user [reason]`
+### FINAL STEP: Type "I AGREE" in ALL CAPS
 
 ---
 
-## 📂 Channel Structure
-
-| Channel | Purpose |
-|---------|---------|
-| #welcome | Landing page |
-| #rules | Server guidelines |
-| #roles | Skill selection |
-| #call-to-arms | Onboarding |
-| #sorry_dave | Security quarantine (S.A.M.P.I.RT) |
-| #resources | Tutorials & guides |
-| #showcase | Project sharing |
-| #help-desk | Technical assistance |
-| #code-reviews | Code feedback |
+## 📜 Channel IDs
+- #welcome: 1480788653579178127
+- #rules: 1481056551337988096
+- #roles: 1481056553099464764
+- #call-to-arms: 1481056554282254431
+- #sorry_dave: 1480429537203585034
 
 ## 📡 Bot Status (All Online)
 - GoonsClawbot 🟢
