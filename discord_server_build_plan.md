@@ -117,9 +117,9 @@ Type **"I AGREE"** in ALL CAPS
 
 ---
 
-## 🛡️ The Sentinel: S.A.M.P.I.RT Bot 🛡️
+## 🛡️ The Sentinel: S.A.M.P.I.RT (SAMPIRT / SAM) Bot 🛡️
 
-The server’s security is anchored by **S.A.M.P.I.RT**, a custom engine built for real-time threat neutralization.
+The server’s security is anchored by **S.A.M.P.I.RT** (also referenced as **SAMPIRT** / **SAM**), a custom engine built for real-time threat neutralization.
 
 | Component | Responsibility | Protection |
 | :--- | :--- | :--- |
