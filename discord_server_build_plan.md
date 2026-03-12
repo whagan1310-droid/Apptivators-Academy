@@ -90,6 +90,33 @@ Type **"I AGREE"** in ALL CAPS
 
 ---
 
+## ✅ Onboarding Enforcement, Persistence, and Role Placement (Implemented)
+
+**Enforcement (server-wide lock)**
+- Until onboarding is completed, members cannot post text in channels.
+- Allowed commands while locked:
+  - `!welcome` (starts onboarding)
+  - `!start_onboarding` (starts onboarding; staff can start for a user)
+  - `I AGREE` (final completion phrase)
+
+**Persistence**
+- Onboarding progress is persisted to `bots/GoonsClawbot/onboarding_state.json` so it survives restarts.
+- One active onboarding session per user (prevents spam restarts). If abandoned, it can be restarted later.
+
+**Role placement on completion**
+- Adds: `Verified Apptivator`
+- Adds: one skill tier role (`The Noob...The God`) based on Step 2 selection
+- Adds: one interest role (`Python`, `Java`, `Web Dev`, `AI/ML`, `Cybersecurity`) based on Step 3 selection
+- Removes: `Initiate` (default join role)
+
+**🎓 Mentor rule**
+- If an unverified member tries to post anything other than `!welcome`, `!start_onboarding`, or `I AGREE`, their message is deleted and the `Mentor` role is automatically assigned (best-effort).
+
+**Wipe for testing**
+- Staff can run `!wipe_server` to purge messages across channels **except pinned or explicitly locked channels**.
+
+---
+
 ## 🛡️ The Sentinel: S.A.M.P.I.RT Bot 🛡️
 
 The server’s security is anchored by **S.A.M.P.I.RT**, a custom engine built for real-time threat neutralization.
