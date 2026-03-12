@@ -26,22 +26,26 @@ This document outlines all channels and their purposes within the Apptivators Ac
 | **#softwaregent** | Software Gent content & links |
 | **#gael-level** | Gael Level content & links |
 | **#youtube-links** | YouTube video sharing |
+| **#github-shared-links** | GitHub repository sharing |
 
 ## 🤖 Bot Command Channels
 
 | Channel | Purpose |
 | :--- | :--- |
+| **#all-bot-commands** | All bot commands reference (read-only) |
 | **#user-bot-commands** | Public bot commands for all users |
 | **#admin-mod-bot-commands** | Admin/Mod bot commands |
 | **#owner-commands** | Owner-only bot commands |
-| **#sync-status** | Real-time bot status (emojis only) |
+| **#sync-status** | Real-time bot status |
 
-## 🎵 Voice Channels
+## 📡 Live Bot Status (All Online)
 
-| Channel | Purpose |
-| :--- | :--- |
-| **Stage** | Voice stage for events |
-| **Lounge** | General voice chat |
+| Bot | Status | Role |
+| :--- | :--- | :--- |
+| **GoonsClawbot** | 🟢 ONLINE | Server Supervisor |
+| **S.A.M.P.I.RT** | 🟢 ONLINE | Security Engine |
+| **SyncFlux** | 🟢 ONLINE | YouTube/Colab Sync |
+| **SonicForge** | 🟢 ONLINE | Audio/Music Stream |
 
 ---
 *"One App At A Time. Build it. Share it. Protect it."* ⚔️🛡️🤖
