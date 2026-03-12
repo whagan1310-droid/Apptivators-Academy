@@ -1,102 +1,33 @@
-# ⚔️ Apptivators Academy: Master Build Plan (Photopea Edition) ⚔️
+# ⚔️ Apptivators Academy: Master Build Plan
 
-Welcome to the definitive blueprint for the Apptivators Academy. This document represents a total rebuild of the server infrastructure, integrating advanced AI mentorship, heuristic security, and premium UI/UX design.
+## 🛡️ S.A.M.P.I.RT Security Engine
+- **S**: Security - Anti-Raid/Nuke
+- **A**: Anti-Virus - File scanning
+- **M**: Malware - Heuristic detection
+- **P**: Phishing - Link verification
+- **I**: IP Logger - Blocking
+- **RT**: Real-Time - 24/7 monitoring
 
----
+**Protocol**: "!!!---SORRY_DAVE_YOU_SHOULD_HAVE_KNOWN_WE_CAN'T_DO_THAT---!!!"
 
-## 🛡️ The Sentinel: S.A.M.P.I.RT Bot 🛡️
-The server's security is anchored by the **S.A.M.P.I.RT Bot**, a custom Python engine built for real-time threat neutralization.
+## ⚔️ The Forge: Progression Tiers
+- **[0-1] The Noob**: Python, Bash, JS, Lua
+- **[2] The Beginner**: Swift, Kotlin, C++
+- **[3-7] The Intermediate**: TypeScript, React, Electron
+- **[8-12] The Expert**: Flutter, Kotlin Multiplatform
+- **[13-∞] The God**: .NET 8/9, MAUI, Avalonia
 
-| Component | Responsibility | Protection |
-| :--- | :--- | :--- |
-| **S** | **Security** | Anti-Raid & Anti-Nuke (Heat-based detection). |
-| **A** | **Anti-Virus** | Static scanning of uploaded `.exe`, `.bat`, `.lua` files. |
-| **M** | **Malware** | Heuristic analysis of suspicious code patterns. |
-| **P** | **Phishing** | Sub-second scanning of URLs against the **Master Black Box**. |
-| **I** | **IP Logger** | Automated blocking of tracking links (Grabify, etc.). |
-| **RT** | **Real Time** | 24/7 sub-second monitoring of all chat interfaces. |
+## 📂 Server Structure
+- **#welcome**: Landing page
+- **#rules**: Server guidelines
+- **#roles**: Skill selection
+- **#call-to-arms**: Onboarding
+- **#sorry_dave**: Security quarantine logs (S.A.M.P.I.RT)
 
-**The Protocol**: Any threat triggers the "Sorry Dave" response: 
-> `!!!---SORRY_DAVE_YOU_SHOULD_HAVE_KNOWN_WE_CAN'T_DO_THAT---!!!`
-Flagged content is instantly quarantined in the **Master Black Box** (`#sorry_dave`).
-
----
-
-## ⚔️ The Forge: Progression Tiers (Level 0 to ∞) ⚔️
-Our community follows the **Expanding Brain** progression model. Everyone starts as an Initiate and evolves through specialized tiers.
-
-### [0-1] THE NOOB (The Scripter)
-- **Image**: `Brain1.png`
-- **Stack**: Python, Bash, Vanilla JavaScript, Lua.
-- **Focus**: "I make the computer do a thing."
-
-### [2] THE BEGINNER (The Purist)
-- **Image**: `Brain2.png` (Sequence)
-- **Stack**: Swift (iOS), Kotlin (Android), C++ (Games).
-- **Focus**: Master of one domain.
-
-### [3-7] THE INTERMEDIATE (Web-Native)
-- **Image**: `Brain3.png`
-- **Stack**: TypeScript + React Native / Electron.
-- **Focus**: The Browser is the Operating System.
-
-### [8-12] THE EXPERT (Complex Cross-Platform)
-- **Image**: `Brain4.png`
-- **Stack**: Flutter (Dart) or Kotlin Multiplatform (KMP).
-- **Focus**: "Code Once, Run Everywhere (Mostly)."
-
-### [13-∞] THE GOD (Master Contributor)
-- **Image**: `Brain1-5.png`
-- **Stack**: .NET 8/9 (C#) + MAUI / Avalonia UI.
-- **Environment**: Visual Studio Enterprise + Cursor AI.
-- **Focus**: "One Code to Rule Them All."
-
----
-
-## 📂 Server Structure & Categories 📂
-
-### Category: Academy Foundation
-| Category ID | Purpose |
-| :--- | :--- |
-| `1481056548510892063` | Main Academy Category |
-
-### Onboarding Channels
-| Channel | Description |
-| :--- | :--- |
-| ⚔️welcome⚔️ | Landing page with `Apptivators Academy.png`. |
-| ⚔️rules⚔️ | Server Development Guidelines. |
-| ⚔️definitions⚔️ | Role and channel purposes. |
-| ⚔️roles⚔️ | Expansion Brain UI for skill selection. |
-| ⚔️call-to-arms⚔️ | The start of your journey. |
-
-### General Channels
-| Channel | Description |
-| :--- | :--- |
-| #general | Main community chat. |
-| #sorry_dave | SAMPI.RT quarantine logs. |
-
----
-
-## 📡 Academy Status: Live Bot Dashboard 📡
-*Status is updated in real-time across all Academy interfaces.*
-
-| Bot Name | Status | Role | Last Update |
-| :--- | :--- | :--- | :--- |
-| **GoonsClawbot** | 🟢 ONLINE | Server Supervisor | *Current* |
-| **S.A.M.P.I.RT** | 🟢 ONLINE | Security Engine | *Current* |
-| **SyncFlux** | 🟢 ONLINE | YouTube/Colab Sync | *Current* |
-| **SonicForge** | 🟢 ONLINE | Audio/Music Stream | *Current* |
-
----
-
-## 🎨 Design Philosophy & Assets
-We utilize **Photopea** for all visual snapshots. All rule banners and UI assets are developed with "White Hat" clarity.
-
-- **Main Server Image**: `Apptivators Academy.png`
-- **Role Progression**: `Brain1-5.png`
-- **Collaborator Icons**: `SoftwareGent.png`, `Gael Level.png`.
-- **UI Interaction**: Interactive Discord buttons with `I AGREE` text validation.
-
----
+## 📡 Bot Status (All Online)
+- GoonsClawbot 🟢
+- S.A.M.P.I.RT 🟢
+- SyncFlux 🟢
+- SonicForge 🟢
 
 *"One App At A Time. Build it. Share it. Protect it."* ⚔️🛡️🤖
