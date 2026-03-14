@@ -1,5 +1,5 @@
-Parent EMOJIS @ https://github.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy/tree/main/Emoji's
-# 🚨 Apptivators Academy: Available Emojis & Sirens 🚨
+
+# 🚨 Apptivators Coding Academy: Available Emojis & Sirens 🚨
 
 This document tracks the official visual sirens and emojis used by the **S.A.M.P.I.RT** security engine and other Forge bots to ensure consistent, large alerts across the server.
 
