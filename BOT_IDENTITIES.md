@@ -1,4 +1,4 @@
-# 🤖 Apptivators Academy: Bot Identities
+# 🤖 Apptivators Coding Academy: Bot Identities
 
 This document outlines the purpose and meaning of the automated systems supporting the Apptivators Academy community.
 
@@ -6,7 +6,7 @@ This document outlines the purpose and meaning of the automated systems supporti
 **Real-Time Security Engine**
 The community's primary defense system, dedicated to maintaining a safe learning environment.
 
-**Status: 🟢 ONLINE**
+**Status: ?
 
 **Acronym Meaning:**
 - **S**: Security (Anti-Raid/Nuke Protections)
@@ -16,27 +16,25 @@ The community's primary defense system, dedicated to maintaining a safe learning
 - **I**: IP Logger (Deceptive Link Blocking)
 - **RT**: Real-Time (Sub-second response protocols)
 
-## ⚔️ GoonsClawbot
+## ⚔️ StrikeSource_Clawbot
 **Community Onboarding & Orchestration**
 The primary interface for new members, responsible for legendary onboarding, role assignments, and community engagement.
 
-**Status: 🟢 ONLINE**
+**Status: ?
 
-- **Powered by**: [OpenClaw](https://github.com/openclaw/openclaw) (General purpose AI Assistant framework).
-- **Function**: Manages the Academy Forge, welcome protocols, and collaborative knowledge sharing.
-- **Support**: For technical details on running your own instance of OpenClaw, please refer to the official [OpenClaw Documentation](https://docs.openclaw.ai).
+
 
 ## 🔊 SonicForge
 **Audio/Music Streaming**
 Handles music playback and audio streaming in voice channels.
 
-**Status: 🟢 ONLINE**
+**Status: ?
 
 ## 🔄 SyncFlux
 **Media Synchronization**
 Manages YouTube/Colab sync and video content sharing.
 
-**Status: 🟢 ONLINE**
+**Status: ?
 
 ---
 *"One App At A Time."* ⚔️🛡️🤖
