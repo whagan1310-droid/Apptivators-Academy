@@ -2,24 +2,30 @@
 
 # ⚔️ Apptivators Coding Academy: Discord Server Build Plan ⚔️
 
-## 🎯 Onboarding Carousel (7 Steps with Emoji Navigation - All Onboarding Pages Pinned, Locked on Indivadual Page as Reference. 
-- `#welcome`: 1482341739430805593
+## 🎯 Onboarding Carousel (4 Steps with Emoji Navigation - All Onboarding Pages Pinned, Locked on Indivadual Page as Reference. 
+- `#welcome` - ⚔️general⚔️ : 1482341739430805593 "start oonboarding carousel "
+- Next
 - `#rules`: 1482354090619961404
+-  click any emoji to continue.
 - `#⚔️roles⚔️`: 1482361162581676072 
+-  click any emoji to continue.
 - `#⚔️call-to-arms⚔️`: 1482361287064289301
+ - #Emoji Must be clicked on all to pages progress to  FINAL STEP Type **"I AGREE"** in ALL CAPS + any emoji click. 
 - `#⚔️sorry_dave⚔️`: 1482368171318186045
 
 Welcome Channel ID 1482341739430805593
 - Introduction to the community
--"Welcome to the Front Lines of Creation. This community exists for one reason. To fuel our passions and build a safer, better tomorrow through the power of code. It doesn't matter if you are a **Noob** or a **God** your contribution is the engine of our collective growth."
 
-END OF WELCOME
 
-RULES
+END OF "WELCOME - General"
+
+"RULES"
 
 Server Rules (Full Details)
-
- 1. Open Source & Code Sharing
+ Keep Exact Text "Beautifying" "PEP 8"
+-"Welcome to the Front Lines of Creation. This community exists for one reason. To fuel our passions and build a safer, better tomorrow through the power of code. It doesn't matter if you are a **Noob** or a **God** your contribution is the engine of our collective growth."
+ 
+1. Open Source & Code Sharing
 - Freely Shared Code: Any code viewable in public channels is shared freely for the community to learn from and use.
 - Private Collaboration: Proprietary work should go to private channels available upon request (managed by Admins/Mods/Bots for specific purposes).
 - Documentation Requirements: When sharing/requesting help, provide one:
@@ -46,13 +52,14 @@ Server Rules (Full Details)
 - No Personal Attacks: No discrimination/religion/politics bashing; keep personal worldviews out to maintain a creative environment.
 - Truthfulness: No fake news/misinformation/intentional lies; harmful content is removed.
 
-END OF RULES
+END OF "RULES".
 
+Click any emoji to continue.
 
-ROLES
+"ROLES"
 
 Helps BOT ASSIGN ROLES & Levels
-Skill Level Selection Skill level details (stack + identity)
+Skill Level Selection Skill level details (roles + level + identity,language)
 - 1️⃣ **The Noob** (Lvl 0-1): Learning fundamentals,- 1️⃣ The Noob (Level 0-1): Python, Bash, JS, Lua
 - 2️⃣ **The Beginner** (Lvl 2): Building small apps,- 2️⃣ The Beginner (Level 2): Swift, Kotlin, C++
 - 3️⃣ **The Intermediate** (Lvl 3-7): Feature development,- 3️⃣ The Intermediate (Level 3-7): TypeScript, React, Electron 
@@ -63,13 +70,19 @@ Language Interests
 - 1️⃣ Python  2️⃣ Java/JS  3️⃣ Web Dev  4️⃣ AI/ML  5️⃣ Cybersecurity
 - 🐍 Python — ☕ Java — 🌐 Web Dev — 🤖 AI/ML — 🔒 Cybersecurity — 🎓 Mentor
 
-END OF ROLES
+END OF "ROLES".
 
-CALL TO ARMS
+Click any emoji to continue.
 
-⚔️call-to-arms⚔️ - Learning & Growth
-📢 Call to Arms: Seeking Architects of the Community
-We are opening a call for Experienced Programmers and Developers to step into the roles of Moderators and Senior Server Moderators.
+"CALL TO ARMS"
+
+"⚔️call-to-arms⚔️" - Learning & Growth - Seeking Architects of the Community
+
+ "Welcome to the front lines of creation. This community exists for one reason: "
+ "to fuel our passions and build a safer, better tomorrow through the power of code.\n\n"
+ "Whether you are a **Noob** or a **God**, your contribution is the engine of our collective growth."
+
+We are opening a call for Experienced Programmers and Developers to step into the roles of "Moderator" and "Senior Server Moderator" "roles" Channel ID 1482361162581676072.
 This is not a request for traditional oversight. We are looking for "Silent Sentinels"—professionals who can:
 Watch, Listen, and Observe: Maintain the pulse of the community without disrupting its natural flow.
 Strategic Interjection: Step in only when necessary to correct misinformation or de-escalate tension.
@@ -78,13 +91,13 @@ Guided Growth: Actively point fellow members toward these curated resources to e
 If you have the experience to mentor, the temperament to lead quietly, and the vision to organize technical information, we need your expertise.
 
 The Guard - Safety Standards
-- Level 3+: Active mentors
+- Level 3+: Active mentors 
 - Level 4-∞: Community Leaders
-- Golden Rule: Treat ban flags as False Positives first
+- Golden Rule: Treat ban flags as False Positives first- "(S.A.M.P.I.RT logic)"
 
 Emoji Must be clicked on all to pages progress to  FINAL STEP Type **"I AGREE"** in ALL CAPS + emoji click 
 
-END OF CALL TO ARMS
+END OF "CALL TO ARMS"
 
 
 **Build the "Silent Sentinel" entry point
