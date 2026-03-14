@@ -1,4 +1,4 @@
-# ⚔️ Apptivators Academy: Discord Server Build Plan (Final Rebuilt) ⚔️
+# ⚔️ Apptivators Coding Academy: Discord Server Build Plan (Final Rebuilt) ⚔️
 
 This is the merged, rebuilt **single source of truth** for the Academy: the Photopea “Master Build Plan” + the GitHub Carousel flow + full rule details.
 
@@ -112,8 +112,6 @@ Type **"I AGREE"** in ALL CAPS
 **🎓 Mentor rule**
 - If an unverified member tries to post anything other than `!welcome`, `!start_onboarding`, or `I AGREE`, their message is deleted and the `Mentor` role is automatically assigned (best-effort).
 
-**Wipe for testing**
-- Staff can run `!wipe_server` to purge messages across channels **except pinned or explicitly locked channels**.
 
 ---
 
@@ -142,22 +140,22 @@ Flagged content is quarantined into `#sorry_dave`.
 We follow the **Expanding Brain** progression model. Everyone starts as an Initiate and evolves through specialized tiers.
 
 ### [0-1] THE NOOB (The Scripter)
-- **Image**: `Brain1.png`
+- **Image**: `Brain1-5.png`
 - **Stack**: Python, Bash, Vanilla JavaScript, Lua
 - **Focus**: "I make the computer do a thing."
 
 ### [2] THE BEGINNER (The Purist)
-- **Image**: `Brain2.png`
+- **Image**: `Brain1-5.png`
 - **Stack**: Swift (iOS), Kotlin (Android), C++ (Games)
 - **Focus**: Master of one domain.
 
 ### [3-7] THE INTERMEDIATE (Web-Native)
-- **Image**: `Brain3.png`
+- **Image**: `Brain1-5.png`
 - **Stack**: TypeScript + React Native / Electron
 - **Focus**: The browser is the operating system.
 
 ### [8-12] THE EXPERT (Complex Cross-Platform)
-- **Image**: `Brain4.png`
+- **Image**: `Brain1-5.png`
 - **Stack**: Flutter (Dart) or Kotlin Multiplatform (KMP)
 - **Focus**: "Code once, run everywhere (mostly)."
 
@@ -170,11 +168,11 @@ We follow the **Expanding Brain** progression model. Everyone starts as an Initi
 ---
 
 ## 📜 Channel IDs (Build Plan Reference)
-- `#welcome`: 1480788653579178127
-- `#rules`: 1481056551337988096
-- `#roles`: 1481056553099464764
-- `#call-to-arms`: 1481056554282254431
-- `#sorry_dave`: 1480429537203585034
+- `#welcome`: 
+- `#rules`: 
+- `#roles`: 
+- `#call-to-arms`: 
+- `#sorry_dave`: 
 
 ## 📂 Channel Details (Add details to all channels)
 
@@ -185,7 +183,7 @@ We follow the **Expanding Brain** progression model. Everyone starts as an Initi
 - `#github-shared-links`: GitHub sharing hub + repo/fork links
 
 **Main server GitHub repo library (public)**
-- [Apptivators Academy](https://github.com/whagan1310-droid/Apptivators-Academy)
+- [Apptivators Academy](https://github.com/whagan1310-droid/Apptivators-Coding-Academy)
 
 **Community & Collaboration**
 - `#resources`: Curated tutorials, guides, learning materials
@@ -210,7 +208,7 @@ We follow the **Expanding Brain** progression model. Everyone starts as an Initi
 
 | Bot Name | Status | Role |
 | :--- | :--- | :--- |
-| **GoonsClawbot** | 🟢 ONLINE | Server Supervisor |
+| **StrikeSource Clawbot** | 🟢 ONLINE | Server Supervisor |
 | **S.A.M.P.I.RT** | 🟢 ONLINE | Security Engine |
 | **SyncFlux** | 🟢 ONLINE | YouTube/Colab Sync |
 | **SonicForge** | 🟢 ONLINE | Audio/Music Stream |
@@ -229,4 +227,4 @@ We utilize Photopea for visual snapshots and Discord-native UI (buttons + modals
 ---
 
 *"One App At A Time. Build it. Share it. Protect it."* ⚔️🛡️🤖
-* "https://github.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy is the Brain of https://github.com/whagan1310-droid/Apptivators-Academy. use any and all to countinue smooth flow of https://github.com/whagan1310-droid/Apptivators-Academy . https://github.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy Should Always stay hidden Only from Public." 
+* "https://github.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy is the Brain of https://github.com/whagan1310-droid/Apptivators-Coding-Academy. use any and all to countinue smooth flow of https://github.com/whagan1310-droid/Apptivators-Academy . https://github.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy Should Always stay hidden Only from Public." 
