@@ -33,3 +33,22 @@ bot.log
 # Discord tokens - NEVER COMMIT
 .secrets/
 tokens.txtnul
+.env
+*.env
+.env.*
+*.log
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.secrets/
+tokens.txt
+nul
+mybots/
+pulled bots/
