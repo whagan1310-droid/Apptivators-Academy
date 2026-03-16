@@ -29,3 +29,7 @@ bot.log
 .vscode/
 *.swp
 *.swo
+
+# Discord tokens - NEVER COMMIT
+.secrets/
+tokens.txt
