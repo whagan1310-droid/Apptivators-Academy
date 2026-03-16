@@ -19,6 +19,7 @@ import aiohttp
 import asyncio
 import os
 from datetime import datetime
+from typing import Any
 
 # CONFIGURATION
 THREAT_VAULT_PATH = "threat_vault.json"
@@ -26,36 +27,36 @@ SAFE_HARBOR_PATH = "safe_harbor.json" # Whitelist
 STRIKE_LOG_PATH = "strike_log.json"
 SHARED_LINKS_PATH = "shared_links.json"
 SORRY_DAVE_MSG = "!!!---SORRY_DAVE_YOU_SHOULD_HAVE_KNOWN_WE_CAN'T_DO_THAT---!!!"
-SORRY_DAVE_CHANNEL_ID = 1480230319935324241 # Placeholder, update per build plan
+SORRY_DAVE_CHANNEL_ID = 1482368171318186045  # #sorry_dave channel from build plan
 GITHUB_SHARE_CHANNEL_ID = 1481056548510892063  # Category or channel for shared links
 
-# VISUAL ASSETS (From Forge Assets)
-GUARD_AVATAR_URL = "https://raw.githubusercontent.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy/main/AA/image_ccdb2fa9-f41f-4ee6-8798-936616055dcc.png"
+# VISUAL ASSETS (From Apptivators-Academy assets/)
+GUARD_AVATAR_URL = "https://raw.githubusercontent.com/whagan1310-droid/Apptivators-Academy/main/assets/bots/sampirt_crimson.png"
 
 # DYNAMIC ALERT MAPPING (Categorized by Hazard Level)
 ALERT_ASSETS = {
     "CRITICAL": {
         "color": discord.Color.red(),
-        "siren": "https://raw.githubusercontent.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy/main/assets/sirens/red_siren.gif",
-        "avatar": "https://raw.githubusercontent.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy/main/AA/sampi_bot_red.png",
+        "siren": "https://raw.githubusercontent.com/whagan1310-droid/Apptivators-Academy/main/assets/sirens/siren_red_large.png",
+        "avatar": "https://raw.githubusercontent.com/whagan1310-droid/Apptivators-Academy/main/assets/bots/sampirt_crimson.png",
         "label": "🚨 CRITICAL: SECURITY BREACH NEUTRALIZED 🚨"
     },
     "HIGH": {
         "color": discord.Color.orange(),
-        "siren": "https://raw.githubusercontent.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy/main/assets/sirens/amber_siren.gif",
-        "avatar": "https://raw.githubusercontent.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy/main/AA/sampi_bot_yellow.png",
+        "siren": "https://raw.githubusercontent.com/whagan1310-droid/Apptivators-Academy/main/assets/sirens/siren_amber_large.png",
+        "avatar": "https://raw.githubusercontent.com/whagan1310-droid/Apptivators-Academy/main/assets/bots/sampirt_crimson.png",
         "label": "⚠️ HIGH: THREAT QUARANTINED ⚠️"
     },
     "MEDIUM": {
         "color": discord.Color.blue(),
-        "siren": "https://raw.githubusercontent.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy/main/assets/sirens/blue_siren.gif",
-        "avatar": "https://raw.githubusercontent.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy/main/AA/sampi_bot_blue.png",
+        "siren": "https://raw.githubusercontent.com/whagan1310-droid/Apptivators-Academy/main/assets/sirens/siren_blue_large.png",
+        "avatar": "https://raw.githubusercontent.com/whagan1310-droid/Apptivators-Academy/main/assets/bots/sampirt_crimson.png",
         "label": "🔹 MEDIUM: ANOMALY DETECTED 🔹"
     },
     "LOW": {
         "color": discord.Color.green(),
-        "siren": "https://raw.githubusercontent.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy/main/assets/sirens/green_siren.gif",
-        "avatar": "https://raw.githubusercontent.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy/main/AA/sampi_bot_green.png",
+        "siren": "https://raw.githubusercontent.com/whagan1310-droid/Apptivators-Academy/main/assets/sirens/siren_green_large.png",
+        "avatar": "https://raw.githubusercontent.com/whagan1310-droid/Apptivators-Academy/main/assets/bots/sampirt_green.png",
         "label": "🟢 LOW: MINOR INFRACTION LOGGED 🟢"
     }
 }

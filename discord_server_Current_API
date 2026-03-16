@@ -189,7 +189,6 @@ Use any and all known Protocals For this Task , Have Daily Connection to Refresh
 
 | Component | Responsibility | Protection |
 | :--- | :--- | :--- |
- PRINT ANAGRAM For Defination of what Bot IS.
 | **S** | **Security** | Anti-Raid & Anti-Nuke (heat-based detection). |
 | **A** | **Anti-Virus** | Static scanning of uploaded `.exe`, `.bat`, `.lua` files. |
 | **M** | **Malware** | Heuristic analysis of suspicious code patterns. |
