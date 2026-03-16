@@ -56,7 +56,11 @@ GITHUB_REPO = "Apptivators-Academy"
 GITHUB_API_BASE = f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}"
 
 # Replace with your actual Category ID for Private Review Chambers
-PRIVATE_CATEGORY_ID = 0  # Set to your Private Review category ID 
+PRIVATE_CATEGORY_ID = 1482341739430805592  # Category for temporary channels
+TEMP_CHANNEL_CATEGORY = 1482341739430805592  # Same category for temporary channels
+
+# Track temporary channels created by users
+temp_channels = {}  # {channel_id: {"owner": user_id, "created_at": datetime}} 
 
 # Files that !deploy_plan will push to GitHub
 BUILD_PLAN_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -86,6 +90,10 @@ SERVER_STRUCTURE = {
         {"name": "user-bot-commands", "topic": "Public bot commands for all users"},
         {"name": "staff-bot-commands", "topic": "Admin/Mod bot commands"},
         {"name": "owner-only-commands", "topic": "Owner-only bot commands"},
+    ],
+    "🛡️ SILENT SENTINEL": [
+        {"name": "become-staff", "topic": "Silent Sentinel Gateway - Apply for Moderator role"},
+        {"name": "staff-application", "topic": "Private channel for staff applications - Applicants only"},
     ],
     "🔗 SHARED LINKS": [
         {"name": "sorry_dave", "topic": "S.A.M.P.I.RT quarantine logs - Security alerts"},
@@ -1045,74 +1053,247 @@ class RepoApprovalView(ui.View):
         await interaction.message.edit(view=self)
 
 # ══════════════════════════════════════════════
-#  COMMAND: !apply_mod
+#  SILENT SENTINEL APPLICATION SYSTEM
 # ══════════════════════════════════════════════
-class ModeratorExamModal(ui.Modal, title='🛡️ Moderator Entrance Exam'):
-    coding_exp = ui.TextInput(label='Years of Coding Exp', placeholder='e.g. 5 years', required=True)
-    knowledge = ui.TextInput(label='Core Knowledge Base', placeholder='e.g. Python, Cybersecurity, Discord API', required=True)
-    id_ref = ui.TextInput(label='User ID (Joining Phase Reference)', placeholder='Enter your Discord User ID', required=True)
-    mission = ui.TextInput(label='Mission Statement', style=discord.TextStyle.paragraph, placeholder='How will you apply your skills as a Teacher/Mentor?', required=True)
-    bad_apples = ui.TextInput(label='Conflict Resolution', style=discord.TextStyle.paragraph, placeholder='How do you handle "bad apples"? Describe your approach to admonishment.', required=True)
+# Channel IDs for Silent Sentinel Gateway
+BECOME_STAFF_CHANNEL = "become-staff"
+STAFF_APPLICATION_CHANNEL = "staff-application"
 
+class SilentSentinelModal(ui.Modal, title='🛡️ Silent Sentinel Application'):
+    """The Silent Sentinel entrance exam as defined in the Master Task."""
+    
+    # Question 1: Multiple choice about insecure shortcut
+    q1_answer = ui.TextInput(
+        label='Q1: Insecure Shortcut Response',
+        placeholder='A/B/C/D - How do you interject?',
+        required=True,
+        max_length=100
+    )
+    
+    # Question 2: Multiple choice about repeated questions
+    q2_answer = ui.TextInput(
+        label='Q2: Repeated Questions Approach',
+        placeholder='A/B/C/D - What is your move?',
+        required=True,
+        max_length=100
+    )
+    
+    # Question 3: Multiple choice about heated debate
+    q3_answer = ui.TextInput(
+        label='Q3: Heated Debate Response',
+        placeholder='A/B/C/D - How do you Quietly Watch?',
+        required=True,
+        max_length=100
+    )
+    
+    # Question 4: Multiple choice about unanswered problem
+    q4_answer = ui.TextInput(
+        label='Q4: Unanswered Problem Approach',
+        placeholder='A/B/C/D - What is your approach?',
+        required=True,
+        max_length=100
+    )
+    
+    # Question 5: Maintaining factual reference
+    q5_answer = ui.TextInput(
+        label='Q5: Factual Reference Material',
+        placeholder='A/B/C/D - How do you maintain it?',
+        required=True,
+        max_length=100
+    )
+    
+    # Open question: Professional proficiency
+    proficiency = ui.TextInput(
+        label='Q6: Professional Proficiency',
+        style=discord.TextStyle.paragraph,
+        placeholder='List all programming languages you are proficient with, years of experience, frameworks...',
+        required=True,
+        max_length=1000
+    )
+    
+    # Fun question: Binary quotes
+    binary_quotes = ui.TextInput(
+        label='Q7: Binary Quotes (Fun)',
+        style=discord.TextStyle.paragraph,
+        placeholder='Decode: 01101011 01100101 01100101 01110000...',
+        required=False,
+        max_length=500
+    )
+    
     async def on_submit(self, interaction: discord.Interaction):
-        staff_ch = discord.utils.get(interaction.guild.text_channels, name="admin-mod-bot-commands")
+        guild = interaction.guild
+        staff_ch = discord.utils.get(guild.text_channels, name=STAFF_APPLICATION_CHANNEL)
+        if not staff_ch:
+            staff_ch = discord.utils.get(guild.text_channels, name="staff-bot-commands")
+        
         if staff_ch:
-            embed = discord.Embed(title="🛡️ NEW MODERATOR APPLICATION & EXAM", color=discord.Color.dark_red())
-            embed.set_author(name=interaction.user.name, icon_url=interaction.user.display_avatar.url)
-            embed.add_field(name="User ID Ref", value=self.id_ref.value, inline=True)
-            embed.add_field(name="Experience", value=self.coding_exp.value, inline=True)
-            embed.add_field(name="Focus", value=self.knowledge.value, inline=False)
-            embed.add_field(name="Mission", value=self.mission.value, inline=False)
-            embed.add_field(name="Conflicts", value=self.bad_apples.value, inline=False)
+            # Calculate score based on correct answers
+            correct_answers = {
+                'q1': 'B',
+                'q2': 'C', 
+                'q3': 'C',
+                'q4': 'C',
+                'q5': 'C'
+            }
             
-            view = ModeratorReviewView(user_id=interaction.user.id)
+            score = 0
+            answers = [self.q1_answer.value.upper().strip(), 
+                       self.q2_answer.value.upper().strip(),
+                       self.q3_answer.value.upper().strip(),
+                       self.q4_answer.value.upper().strip(),
+                       self.q5_answer.value.upper().strip()]
+            
+            for i, ans in enumerate(answers):
+                if ans == correct_answers[f'q{i+1}']:
+                    score += 1
+            
+            embed = discord.Embed(
+                title="🛡️ SILENT SENTINEL APPLICATION",
+                description=f"**Applicant:** {interaction.user.mention}\n**Score:** {score}/5 correct",
+                color=discord.Color.dark_blue()
+            )
+            embed.set_author(name=interaction.user.name, icon_url=interaction.user.display_avatar.url)
+            embed.add_field(name="Q1: Insecure Shortcut", value=self.q1_answer.value[:100], inline=False)
+            embed.add_field(name="Q2: Repeated Questions", value=self.q2_answer.value[:100], inline=False)
+            embed.add_field(name="Q3: Heated Debate", value=self.q3_answer.value[:100], inline=False)
+            embed.add_field(name="Q4: Unanswered Problem", value=self.q4_answer.value[:100], inline=False)
+            embed.add_field(name="Q5: Factual Reference", value=self.q5_answer.value[:100], inline=False)
+            embed.add_field(name="Professional Proficiency", value=self.proficiency.value[:500], inline=False)
+            embed.add_field(name="Binary Quotes", value=self.binary_quotes.value[:200] if self.binary_quotes.value else "N/A", inline=False)
+            embed.set_footer(text="Silent Sentinel Entrance Exam")
+            
+            view = SilentSentinelReviewView(user_id=interaction.user.id, score=score)
             await staff_ch.send(embed=embed, view=view)
-            await interaction.response.send_message("🛡️ Your Exam has been recorded. The Council will review your score and assign a Moderator Level (1-5).", ephemeral=True)
+            await interaction.response.send_message(
+                f"🛡️ **Silent Sentinel Application Submitted!**\n"
+                f"Score: {score}/5 correct\n"
+                f"The Council will review your application and assign a Moderator Level (3-5).\n\n"
+                f"*Binary Quote 1: 'Keep it simple' | Quote 2: 'One app at a time'*",
+                ephemeral=True
+            )
         else:
             await interaction.response.send_message("❌ Staff channel not found.", ephemeral=True)
 
-class ModeratorReviewView(ui.View):
-    def __init__(self, user_id):
+
+class SilentSentinelReviewView(ui.View):
+    def __init__(self, user_id: int, score: int):
         super().__init__(timeout=None)
         self.user_id = user_id
-
-    async def assign_mod(self, interaction: discord.Interaction, level: int):
+        self.score = score
+    
+    async def assign_sentinel(self, interaction: discord.Interaction, level: int):
         if not interaction.user.guild_permissions.administrator:
-            await interaction.response.send_message("❌ Only Administrators can assign Moderator Levels.", ephemeral=True)
+            await interaction.response.send_message("❌ Only Administrators can assign Silent Sentinel roles.", ephemeral=True)
             return
-
+        
         guild = interaction.guild
         member = guild.get_member(self.user_id)
-        role_name = f"Moderator Level {level}"
+        
+        # Determine role based on score and level
+        if self.score >= 4 and level >= 3:
+            role_name = f"Moderator Level {level}"
+            base_role = "Silent Sentinel"
+        else:
+            await interaction.response.send_message(f"⚠️ Score too low ({self.score}/5) or level invalid.", ephemeral=True)
+            return
+        
         role = discord.utils.get(guild.roles, name=role_name)
         if not role:
-            role = await guild.create_role(name=role_name, color=discord.Color.red())
-
+            role = await guild.create_role(name=role_name, color=discord.Color.dark_blue())
+        
+        sentinel_role = discord.utils.get(guild.roles, name=base_role)
+        if not sentinel_role:
+            sentinel_role = await guild.create_role(name=base_role, color=discord.Color.dark_gold())
+        
         if member:
-            # Grant level role and base moderator role
-            base_mod = discord.utils.get(guild.roles, name="Moderator")
-            if not base_mod: base_mod = await guild.create_role(name="Moderator", color=discord.Color.orange())
-            await member.add_roles(role, base_mod)
-            await interaction.response.send_message(f"✅ Promoted {member.mention} to **{role_name}**! 🛡️⚔️")
+            await member.add_roles(role, sentinel_role)
+            await interaction.response.send_message(
+                f"✅ {member.mention} has been granted **{role_name}** and **{base_role}**!\n"
+                f"🛡️ Welcome to the Silent Sentinels!"
+            )
             self.stop()
         else:
             await interaction.response.send_message("❌ Member not found.", ephemeral=True)
+    
+    @ui.button(label="Lvl 3 (Mod)", style=discord.ButtonStyle.secondary)
+    async def lvl3(self, interaction: discord.Interaction, button: ui.Button):
+        await self.assign_sentinel(interaction, 3)
+    
+    @ui.button(label="Lvl 4 (Sr Mod)", style=discord.ButtonStyle.secondary)
+    async def lvl4(self, interaction: discord.Interaction, button: ui.Button):
+        await self.assign_sentinel(interaction, 4)
+    
+    @ui.button(label="Lvl 5 (Lead)", style=discord.ButtonStyle.primary)
+    async def lvl5(self, interaction: discord.Interaction, button: ui.Button):
+        await self.assign_sentinel(interaction, 5)
+    
+    @ui.button(label="❌ Reject", style=discord.ButtonStyle.danger)
+    async def reject(self, interaction: discord.Interaction, button: ui.Button):
+        if not interaction.user.guild_permissions.administrator:
+            await interaction.response.send_message("❌ Only Administrators can reject applications.", ephemeral=True)
+            return
+        member = interaction.guild.get_member(self.user_id)
+        if member:
+            await interaction.response.send_message(f"❌ Application for {member.mention} has been rejected.")
+        self.stop()
 
-    @ui.button(label="Lvl 1", style=discord.ButtonStyle.secondary)
-    async def lvl1(self, interaction: discord.Interaction, button: ui.Button): await self.assign_mod(interaction, 1)
-    @ui.button(label="Lvl 2", style=discord.ButtonStyle.secondary)
-    async def lvl2(self, interaction: discord.Interaction, button: ui.Button): await self.assign_mod(interaction, 2)
-    @ui.button(label="Lvl 3", style=discord.ButtonStyle.secondary)
-    async def lvl3(self, interaction: discord.Interaction, button: ui.Button): await self.assign_mod(interaction, 3)
-    @ui.button(label="Lvl 4", style=discord.ButtonStyle.secondary)
-    async def lvl4(self, interaction: discord.Interaction, button: ui.Button): await self.assign_mod(interaction, 4)
-    @ui.button(label="Lvl 5", style=discord.ButtonStyle.primary)
-    async def lvl5(self, interaction: discord.Interaction, button: ui.Button): await self.assign_mod(interaction, 5)
 
-@bot.command(name="apply_mod")
-async def apply_mod(ctx):
-    """Open the moderator entrance exam modal."""
-    await ctx.interaction.response.send_modal(ModeratorExamModal()) if ctx.interaction else await ctx.send("Please use the Slash Command variation.")
+class SilentSentinelGatewayView(ui.View):
+    """Gateway view for #become-staff channel."""
+    def __init__(self):
+        super().__init__(timeout=None)
+    
+    @ui.button(label="🛡️ Apply for Silent Sentinel", style=discord.ButtonStyle.primary, emoji="🛡️")
+    async def apply_button(self, interaction: discord.Interaction, button: ui.Button):
+        await interaction.response.send_modal(SilentSentinelModal())
+
+
+@bot.command(name="apply_sentinel")
+async def apply_sentinel(ctx):
+    """Open the Silent Sentinel entrance exam modal."""
+    await ctx.send_modal(SilentSentinelModal())
+
+
+@bot.command(name="setup_sentinel_gateway")
+@commands.has_permissions(administrator=True)
+async def setup_sentinel_gateway(ctx):
+    """Setup the Silent Sentinel gateway in #become-staff channel."""
+    guild = ctx.guild
+    
+    # Find or create the become-staff channel
+    become_staff = discord.utils.get(guild.text_channels, name=BECOME_STAFF_CHANNEL)
+    if not become_staff:
+        category = discord.utils.get(guild.categories, name="🛡️ SILENT SENTINEL")
+        if not category:
+            category = await guild.create_category("🛡️ SILENT SENTINEL")
+        become_staff = await guild.create_text_channel(
+            BECOME_STAFF_CHANNEL,
+            category=category,
+            topic="Silent Sentinel Gateway - Apply for Moderator role"
+        )
+    
+    # Create the gateway message
+    embed = discord.Embed(
+        title="🛡️ SILENT SENTINEL GATEWAY",
+        description=(
+            "**We are looking for Silent Sentinels** - professionals who can:\n\n"
+            "• **Watch, Listen, and Observe** - Maintain the pulse of the community\n"
+            "• **Strategic Interjection** - Step in only when necessary\n"
+            "• **Knowledge Infrastructure** - Create and curate quality resources\n"
+            "• **Guided Growth** - Point members toward best information\n\n"
+            "**Requirements:**\n"
+            "• Level 3+: Active mentors\n"
+            "• Level 4-∞: Community Leaders\n"
+            "• Golden Rule: Treat ban flags as False Positives first"
+        ),
+        color=discord.Color.dark_blue()
+    )
+    embed.set_footer(text="Click the button below to apply • One App At A Time")
+    embed.set_image(url="https://raw.githubusercontent.com/whagan1310-droid/Apptivators-Academy/main/assets/Brain1-5.png")
+    
+    view = SilentSentinelGatewayView()
+    await become_staff.send(embed=embed, view=view)
+    await ctx.send(f"✅ Silent Sentinel Gateway setup complete in {become_staff.mention}")
 
 
 # ══════════════════════════════════════════════
@@ -1356,6 +1537,104 @@ async def review(ctx):
         except Exception as e:
             await ctx.send(f"❌ Review Error: {e}")
 
+
+# ══════════════════════════════════════════════
+#  TEMPORARY CHANNEL SYSTEM
+# ══════════════════════════════════════════════
+@bot.command(name="create_channel")
+async def create_temp_channel(ctx, *, channel_name: str = None):
+    """Create a temporary channel in the Temporary category. Channel closes when creator leaves."""
+    if not channel_name:
+        await ctx.send("Usage: `!create_channel <channel_name>`")
+        return
+    
+    guild = ctx.guild
+    category = discord.utils.get(guild.categories, id=TEMP_CHANNEL_CATEGORY)
+    
+    if not category:
+        # Create category if it doesn't exist
+        category = await guild.create_category("Temporary Channels")
+        logger.info(f"Created category: Temporary Channels ({category.id})")
+    
+    # Create the channel
+    channel = await guild.create_text_channel(
+        channel_name,
+        category=category,
+        topic=f"Temporary channel created by {ctx.author.name}. Closes when creator leaves.",
+        overwrites={
+            guild.default_role: discord.PermissionOverwrite(read_messages=True, send_messages=True),
+            ctx.author: discord.PermissionOverwrite(read_messages=True, send_messages=True, manage_channels=True)
+        }
+    )
+    
+    # Track the channel
+    temp_channels[channel.id] = {
+        "owner": ctx.author.id,
+        "created_at": datetime.datetime.utcnow()
+    }
+    
+    await ctx.send(f"✅ Created temporary channel: {channel.mention}\n"
+                   f"Channel will close when you leave the server or use `!close_channel`.")
+
+@bot.command(name="close_channel")
+async def close_temp_channel(ctx):
+    """Close a temporary channel you created."""
+    channel = ctx.channel
+    
+    if channel.id not in temp_channels:
+        await ctx.send("❌ This is not a temporary channel.")
+        return
+    
+    if temp_channels[channel.id]["owner"] != ctx.author.id:
+        await ctx.send("❌ Only the channel creator can close this channel.")
+        return
+    
+    await channel.delete(reason=f"Closed by creator {ctx.author.name}")
+    del temp_channels[channel.id]
+
+@bot.command(name="my_channel")
+async def my_channel(ctx):
+    """Show channels you've created."""
+    user_channels = [ch_id for ch_id, data in temp_channels.items() if data["owner"] == ctx.author.id]
+    
+    if not user_channels:
+        await ctx.send("You haven't created any temporary channels.")
+        return
+    
+    guild = ctx.guild
+    channel_list = []
+    for ch_id in user_channels:
+        ch = guild.get_channel(ch_id)
+        if ch:
+            channel_list.append(f"• {ch.mention}")
+    
+    embed = discord.Embed(
+        title="📱 Your Temporary Channels",
+        description="\n".join(channel_list) if channel_list else "No active channels",
+        color=discord.Color.blue()
+    )
+    await ctx.send(embed=embed)
+
+# Auto-close channels when users leave
+@bot.event
+async def on_member_remove(member):
+    """Close temporary channels owned by the member who left."""
+    guild = member.guild
+    channels_to_close = []
+    
+    for ch_id, data in list(temp_channels.items()):
+        if data["owner"] == member.id:
+            channel = guild.get_channel(ch_id)
+            if channel:
+                channels_to_close.append((ch_id, channel))
+    
+    for ch_id, channel in channels_to_close:
+        try:
+            await channel.delete(reason=f"Owner {member.name} left the server")
+            del temp_channels[ch_id]
+            logger.info(f"Closed channel {channel.name} - owner left")
+        except Exception as e:
+            logger.error(f"Error closing channel: {e}")
 
 # ══════════════════════════════════════════════
 #  RUN
