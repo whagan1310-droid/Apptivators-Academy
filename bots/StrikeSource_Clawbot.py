@@ -52,11 +52,11 @@ GITHUB_PAT = os.getenv("GITHUB_PAT")
 # Configuration constants
 # ──────────────────────────────────────────────
 GITHUB_OWNER = "whagan1310-droid"
-GITHUB_REPO = "Discord-Build-Plan-Apptivators Coding Academy"
+GITHUB_REPO = "Apptivators-Academy"
 GITHUB_API_BASE = f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}"
 
 # Replace with your actual Category ID for Private Review Chambers
-PRIVATE_CATEGORY_ID = 
+PRIVATE_CATEGORY_ID = 0  # Set to your Private Review category ID 
 
 # Files that !deploy_plan will push to GitHub
 BUILD_PLAN_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -131,19 +131,22 @@ SKILL_LEVEL_ROLES = {
 
 # New Channel IDs from START HERE.txt
 CHANNEL_IDS = {
-    "welcome - general": 
-    "rules": 
-    "roles": 
-    "call_to_arms":
-    "sorry_dave":
-    "moderator-only":
-    "github-shared-links":
-   
-
+    "welcome": 1482341739430805593,       # ⚔️general⚔️
+    "rules": 1482354090619961404,
+    "roles": 1482361162581676072,
+    "call_to_arms": 1482361287064289301,
+    "sorry_dave": 1482368171318186045,
+    "moderator_only": 1482354090619961407,
+    "github_shared_links": 1482379730555768984,
 }
 
 # Locked channels (text disabled, emojis only)
-LOCKED_CHANNELS = 
+LOCKED_CHANNELS = [
+    1482341739430805593,  # welcome - ⚔️general⚔️
+    1482354090619961404,  # rules
+    1482361162581676072,  # roles
+    1482361287064289301,  # call_to_arms
+]
 
 # Default role for all new members
 DEFAULT_JOIN_ROLE = "Initiate"
@@ -472,7 +475,7 @@ class RoleSelectionView(ui.View):
             color=0x3498DB
         )
         # Use Brain Image for roles
-        rules_embed.set_image(url="https://raw.githubusercontent.com/whagan1310-droid/Discord-Build-Plan-Apptivators Coding Academy/main/AA/Brain1-5.png")
+        rules_embed.set_image(url="https://raw.githubusercontent.com/whagan1310-droid/Apptivators-Academy/main/assets/Brain1-5.png")
         
         if os.path.exists(template_path):
             with open(template_path, "r", encoding="utf-8") as f:
@@ -530,7 +533,7 @@ class JoinWalkthroughView(ui.View):
             ),
             color=discord.Color.blue()
         )
-        embed.set_thumbnail(url="https://raw.githubusercontent.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy/main/AA/Brain1-5.png")
+        embed.set_thumbnail(url="https://raw.githubusercontent.com/whagan1310-droid/Apptivators-Academy/main/assets/Brain1-5.png")
         await interaction.response.send_message(embed=embed, view=RoleSelectionView(), ephemeral=True)
 
 
@@ -698,7 +701,7 @@ async def welcome(ctx):
         ),
         color=0xE74C3C,
     )
-    embed.set_image(url="https://raw.githubusercontent.com/whagan1310-droid/Discord-Build-Plan-Apptivators-Academy/main/AA/Apptivators%20Academy.png")
+    embed.set_image(url="https://raw.githubusercontent.com/whagan1310-droid/Apptivators-Academy/main/assets/Apptivators%20Academy.png")
     embed.add_field(
         name="🚀 Your Journey",
         value="Click the button below to start your skill assessment and agree to the server protocols.",
