@@ -1,0 +1,36 @@
+{
+  "content": "",
+  "embeds": [
+    {
+      "title": "⚔️ APPTIVATORS ACADEMY RULES ⚔️",
+      "description": "Welcome to the Front Lines of Creation. This community exists for one reason. To fuel our passions and build a safer, better tomorrow through the power of code. It doesn't matter if you are a **Noob** or a **God** your contribution is the engine of our collective growth.",
+      "color": 15158332,
+      "fields": [
+        {
+          "name": "📋 1. Open Source & Code Sharing",
+          "value": "**Freely Shared Code:** Any code viewable in public channels is shared freely for the community to learn from and use.\n**Private Collaboration:** Proprietary work should go to private channels available upon request (managed by Admins/Mods/Bots for specific purposes).\n**Documentation Requirements:** When sharing/requesting help, provide one:\n• The open code snippet directly\n• A GitHub/GitLab/Bitbucket repository reference\n• A direct source link or a clear claim of authorship\n**Third-Party Compliance:** Shared material must adhere to the rules/ToS of the originating third-party site.",
+          "inline": false
+        },
+        {
+          "name": "🔒 2. Malicious Content & Security",
+          "value": "**Zero Tolerance for Malware:** If a bot/mod/admin marks code as malicious, it is immediately removed from public view.\n**Strike System:** Posting malicious code (phishing/malware/deceptive scripts) triggers a formal strike.\n**Immediate Review:** Flagged users are placed \"Under Review\"; no final ban occurs until full human review completes.",
+          "inline": false
+        },
+        {
+          "name": "⚖️ 3. Fair Review & Ban Appeals",
+          "value": "**Right to Explain:** One (1) chance to explain serious violations; recorded in the case file.\n**Agreement Requirement:** A ban requires a finding of fault + unanimous agreement of at least three (3) Admins/Moderators.\n**Case Records:** Staff/bot text interactions are kept under a unique Ban File Number.\n**Full Disclosure:** Banned members receive a copy of their case file via email (requires a valid email). Failure to participate/provide email results in an automatic final ban.\n**Data Destruction:** On confirmed final ban, all code submitted by the member to the server is destroyed.\n**Reinstatement:** Moderators may review past bans for reinstatement if new evidence/significant growth is shown.",
+          "inline": false
+        },
+        {
+          "name": "🤝 4. Community Conduct",
+          "value": "**Zero Harassment:** No bullying, hate speech, or harassment.\n**No Personal Attacks:** No discrimination/religion/politics bashing; keep personal worldviews out to maintain a creative environment.\n**Truthfulness:** No fake news/misinformation/intentional lies; harmful content is removed.",
+          "inline": false
+        }
+      ],
+      "footer": {
+        "text": "⚔️ One App At A Time • Auto-Pilot"
+      },
+      "timestamp": "2026-03-16T00:00:00.000Z"
+    }
+  ]
+}
