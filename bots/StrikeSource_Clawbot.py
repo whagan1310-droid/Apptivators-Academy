@@ -73,50 +73,25 @@ DEPLOY_FILES = [
 
 # ──────────────────────────────────────────────
 # Server Structure Definition
+# Updated to match existing Discord server structure
 # ──────────────────────────────────────────────
 SERVER_STRUCTURE = {
-    "📢 1. Welcome & Information": [
-        {"name": "welcome", "topic": "Landing page for new members. triggers Onboarding."},
-        {"name": "rules", "topic": "The immutable law of the server. Accept to participate."},
-        {"name": "announcements", "topic": "Read-only space for Admins/Leaders."},
-        {"name": "roles", "topic": "Self-assign skill levels and tags."},
-        {"name": "github-shared-links", "topic": "Automated GitHub Webhook feed."},
+    "⚔️ ONBOARDING": [
+        {"name": "⚔️general⚔️", "topic": "Landing page - First stop for all new members. Triggers onboarding carousel."},
+        {"name": "⚔️rules⚔️", "topic": "Server Development Guidelines - What you can/cannot do"},
+        {"name": "⚔️roles⚔️", "topic": "Skill selection via Expansion Brain UI"},
+        {"name": "⚔️call-to-arms⚔️", "topic": "The start of your journey - Introduction to the community"},
     ],
-    "🤝 2. Community & Collaboration": [
-        {"name": "resources", "topic": "Curated collection of tutorials and guides."},
-        {"name": "showcase", "topic": "Share projects and collaborate."},
-        {"name": "memes", "topic": "Safe space for tech humor."},
-        {"name": "career-growth", "topic": "Job opportunities and resume reviews."},
+    "🤖 BOT COMMANDS": [
+        {"name": "user-bot-commands", "topic": "Public bot commands for all users"},
+        {"name": "staff-bot-commands", "topic": "Admin/Mod bot commands"},
+        {"name": "owner-only-commands", "topic": "Owner-only bot commands"},
     ],
-    "🛠️ 3. Support & Technical Help": [
-        {"name": "help-desk", "topic": "Ticketing system for technical assistance."},
-        {"name": "code-reviews", "topic": "Professional feedback and debugging."},
-        {"name": "quick-questions", "topic": "Short, simple tech questions."},
-        {"name": "learning-groups", "topic": "Study cohorts and bootcamps."},
-    ],
-    "💻 4. Language-Specific Categories": [
-        {"name": "web-dev", "topic": "HTML, CSS, JS, and frameworks."},
-        {"name": "python", "topic": "Python development and libraries."},
-        {"name": "java-cpp", "topic": "Java and C++ discussion."},
-        {"name": "rust", "topic": "Rustacean sanctuary."},
-        {"name": "ai-machine-learning", "topic": "AI/ML developments."},
-        {"name": "devops-cybersecurity", "topic": "Infra and security."},
-    ],
-    "🎥 5.  Needed NEW BOT SyncFlux: Media & Colab": [
-        {"name": "youtube-links", "topic": "Shared Academy YouTube content."},
-        {"name": "colab-notebooks", "topic": "Collaborative coding notebooks."},
-        {"name": "sync-status", "topic": "Media pipeline health tracking."},
-    ],
-    "🎵 6. Needed NEW BOT SonicForge: Audio & Rhythm": [
-        {"name": "the-forge-audio", "topic": "High-fidelity Academy audio stream."},
-        {"name": "academy-playlists", "topic": "Collaborative music queues."},
-        {"name": "rhythm-status", "topic": "Audio engine diagnostics."},
-    ],
-    "📜 7. Transparency & Governance": [
-        {"name": "user-bot-commands", "topic": "Public Academy Command Manual for all users."},
-        {"name": "staff-bot-commands", "topic": "Confidential Staff Command Manual (Admins/Mods only)."},
-        {"name": "owner-only-commands", "topic": "Confidential Owner Only Command Manual (Owner Only)."},
-        {"name": "collaborator-applications", "topic": "Public queue for collaborator status requests."},
+    "🔗 SHARED LINKS": [
+        {"name": "sorry_dave", "topic": "S.A.M.P.I.RT quarantine logs - Security alerts"},
+        {"name": "softwaregent", "topic": "Software Gent content & links"},
+        {"name": "gael-level", "topic": "Gael Level content & links"},
+        {"name": "github-shared-links", "topic": "GitHub repository sharing"},
     ],
 }
 
