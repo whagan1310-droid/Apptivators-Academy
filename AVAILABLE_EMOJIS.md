@@ -3,16 +3,46 @@
 
 This document tracks the official visual sirens and emojis used by the **S.A.M.P.I.RT** security engine and other Forge bots to ensure consistent, large alerts across the server.
 
+## Asset Directory Structure
+
+```
+assets/
+├── Apptivators Academy.png    # Main server icon
+├── Brain1-5.png              # Role progression (Noob → God)
+├── SoftwareGent.png          # Collaborator icon
+├── Gael Level.png            # Collaborator icon
+├── bots/                     # Bot avatar images
+│   ├── sampirt_crimson.png
+│   ├── sampirt_green.png
+│   ├── StrikeSource Clawbot.png
+│   ├── SyncFlux.png
+│   └── SonicForge.png
+├── emoji/                    # Tech/programming emojis
+│   └── [50+ emoji files]
+└── sirens/                   # Alert level sirens
+    ├── red_siren (1).gif
+    ├── siren_red.png
+    ├── siren_red_large.png
+    └── [amber, blue, green variants]
+```
+
 ## S.A.M.P.I.RT Alert Sirens
 
-Since the original animated `.gif` sirens were stored in the private Build Plan repository, you have two options to keep them "large as they are" in S.A.M.P.I.RT's alerts:
+### Static PNG Sirens (High Resolution)
+- **CRITICAL**: `assets/sirens/siren_red_large.png`
+- **HIGH**: `assets/sirens/siren_amber_large.png`
+- **MEDIUM**: `assets/sirens/siren_blue_large.png`
+- **LOW**: `assets/sirens/siren_green_large.png`
 
-### Option 1: Standard Discord Emojis (Immediate Use)
-You can use standard, built-in Discord emojis. When placed by themselves or at the top of an embed, they provide clear visual indicators:
-- **CRITICAL**:  (`siren_red_large.png`)
-- **HIGH**:  (`siren_amber_large.png`)
-- **MEDIUM**:  (`siren_blue_large.png`) 
-- **LOW**:  (`siren_green_large.png`) 
+### Animated GIF Sirens
+- **CRITICAL**: `assets/sirens/red_siren (1).gif`
+- **HIGH**: `assets/sirens/amber_siren (1).gif`
+- **MEDIUM**: `assets/sirens/blue_siren (1).gif`
+- **LOW**: `assets/sirens/green_siren (1).gif`
 
-These high-quality siren images (`siren_red_large.png`, `siren_amber_large.png`, `siren_blue_large.png`, `siren_green_large.png`) are already injected into `sampi_rt_bot.py` and require no further setup on your part.
+### Discord Emoji Alternatives
+- **CRITICAL**: 🚨 (`:rotating_light:`)
+- **HIGH**: ⚠️ (`:warning:`)
+- **MEDIUM**: 🛡️ (`:shield:`) or 🔵 (`:blue_circle:`)
+- **LOW**: 🟢 (`:green_circle:`) or ✅ (`:white_check_mark:`)
 
